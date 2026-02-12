@@ -1,0 +1,61 @@
+// src/config/theme.js
+
+// 1. Paleta de Colores y Configuración Visual
+export const THEME = {
+    primary: '#2c3e50',
+    secondary: '#ecf0f1',
+    accent: '#2980b9',
+    success: '#27ae60',
+    warning: '#f39c12',
+    danger: '#c0392b',
+    text: '#2c3e50',
+    textSoft: '#7f8c8d',
+    white: '#ffffff',
+    sidebarBg: '#2c3e50',
+    sidebarText: '#bdc3c7',
+    shadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
+};
+
+// 2. Objetos de Estilo (CSS-in-JS)
+export const estilos = {
+    appLayout: { display: 'flex', flexDirection: 'column', height: '100vh', fontFamily: "'Inter', 'Segoe UI', sans-serif", background: THEME.secondary, overflow: 'hidden' },
+    adminGrid: { display: 'flex', height: '100%', width: '100%' },
+    sidebar: { width: '280px', background: THEME.sidebarBg, color: 'white', display: 'flex', flexDirection: 'column', flexShrink: 0 },
+    logoArea: { height: '80px', display: 'flex', alignItems: 'center', paddingLeft: '30px', fontSize: '20px', fontWeight: '800', letterSpacing: '2px', borderBottom: '1px solid rgba(255,255,255,0.05)', color: 'white' },
+    userProfile: { padding: '25px', borderTop: '1px solid rgba(255,255,255,0.05)', background: 'rgba(0,0,0,0.1)' },
+    mainContent: { flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden', position: 'relative', minWidth: 0 },
+    topBar: { height: '80px', background: 'white', borderBottom: '1px solid #e0e0e0', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 40px', flexShrink: 0 },
+    pageTitle: { margin: 0, fontSize: '24px', fontWeight: '700', color: THEME.text },
+    contentBody: { flex: 1, overflowY: 'auto', padding: '40px' },
+    rightPanel: { background: '#f9fafb', display: 'flex', flexDirection: 'column', transition: 'width 0.3s cubic-bezier(0.4, 0, 0.2, 1)', overflow: 'hidden', borderLeft: '1px solid #e0e0e0' },
+    rightHeader: { padding: '30px 20px', fontWeight: '800', color: THEME.text, fontSize: '13px', letterSpacing: '1px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #eee' },
+    badgeCount: { background: THEME.danger, color: 'white', padding: '4px 10px', borderRadius: '20px', fontSize: '11px', fontWeight: 'bold' },
+    emptyState: { padding: '40px', textAlign: 'center', color: THEME.textSoft },
+    tableCard: { background: 'white', borderRadius: '16px', boxShadow: THEME.shadow, overflow: 'hidden', border: '1px solid #eee' },
+    table: { width: '100%', borderCollapse: 'collapse', fontSize: '14px' },
+    th: { padding: '20px 30px', borderBottom: '2px solid #f0f0f0', textAlign: 'left', color: THEME.textSoft, fontWeight: '700', fontSize: '12px', textTransform: 'uppercase' },
+    td: { padding: '20px 30px', borderBottom: '1px solid #f9f9f9', color: THEME.text },
+    tr: { transition: 'background 0.1s' },
+    formCard: { background: 'white', padding: '50px', borderRadius: '16px', boxShadow: THEME.shadow, maxWidth: '800px', margin: '0 auto' },
+    formGrid: { display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px' },
+    input: { width: '100%', padding: '14px', border: '1px solid #dcdcdc', borderRadius: '8px', fontSize: '14px', outline: 'none', transition: 'border 0.2s', boxSizing: 'border-box', background: '#fdfdfd' },
+    inputBig: { width: '100%', padding: '18px', border: '1px solid #dcdcdc', borderRadius: '8px', fontSize: '24px', fontWeight: '800', outline: 'none', boxSizing: 'border-box', color: THEME.text },
+    btnPrimary: { padding: '14px 30px', background: THEME.primary, color: 'white', border: 'none', borderRadius: '8px', fontWeight: '700', cursor: 'pointer', fontSize: '14px', transition: 'background 0.2s' },
+    btnPrimaryFull: { width: '100%', padding: '16px', background: THEME.accent, color: 'white', border: 'none', borderRadius: '8px', fontWeight: '800', cursor: 'pointer', fontSize: '15px', letterSpacing: '1px' },
+    btnSecondary: { padding: '14px 30px', background: '#f0f0f0', color: THEME.text, border: 'none', borderRadius: '8px', fontWeight: '700', cursor: 'pointer', fontSize: '14px' },
+    btnGhost: { background: 'transparent', border: '1px solid #dcdcdc', color: THEME.textSoft, padding: '10px 20px', borderRadius: '30px', cursor: 'pointer', fontSize: '13px', fontWeight: '600' },
+    btnGhostLight: { background: 'rgba(255,255,255,0.2)', border: 'none', color: 'white', padding: '8px 20px', borderRadius: '30px', cursor: 'pointer', fontSize: '13px', fontWeight: '600' },
+    btnOutlinePrimary: { width: '100%', padding: '12px', background: 'white', border: `2px solid ${THEME.accent}`, color: THEME.accent, borderRadius: '8px', fontWeight: '700', cursor: 'pointer', fontSize: '13px' },
+    btnLink: { background: 'none', border: 'none', color: THEME.accent, cursor: 'pointer', fontWeight: '700', fontSize: '13px' },
+    btnLinkInfo: { background: 'none', border: 'none', color: THEME.text, cursor: 'pointer', fontWeight: '700', fontSize: '13px' },
+    btnLinkDanger: { background: 'none', border: 'none', color: THEME.danger, cursor: 'pointer', fontWeight: '700', fontSize: '13px' },
+    btnExcel: { padding: '10px 20px', background: '#217346', color: 'white', border: 'none', borderRadius: '6px', fontWeight: '700', cursor: 'pointer', fontSize: '13px', display: 'flex', alignItems: 'center', gap: '8px' },
+    loginWrapper: { height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', background: '#f0f2f5' },
+    loginCard: { background: 'white', padding: '60px 50px', borderRadius: '20px', boxShadow: '0 20px 60px rgba(0,0,0,0.08)', width: '380px', textAlign: 'center' },
+    brandLogo: { fontSize: '28px', fontWeight: '900', color: THEME.primary, letterSpacing: '3px', marginBottom: '10px' },
+    modalOverlay: { position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)', display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 1000 },
+    modalCard: { background: 'white', padding: '40px', borderRadius: '16px', width: '500px', boxShadow: '0 25px 80px rgba(0,0,0,0.2)', maxHeight: '90vh', overflowY: 'auto' },
+    modalActions: { marginTop: '40px', display: 'flex', justifyContent: 'flex-end', gap: '15px', borderTop: '1px solid #eee', paddingTop: '20px' },
+    tab: { padding: '10px 20px', background: '#eee', border: 'none', cursor: 'pointer', borderRadius: '5px', fontWeight: '600', color: '#777' },
+    tabActive: { padding: '10px 20px', background: THEME.primary, color: 'white', border: 'none', cursor: 'pointer', borderRadius: '5px', fontWeight: '600' }
+};
